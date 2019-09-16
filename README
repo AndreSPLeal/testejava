@@ -1,0 +1,69 @@
+1. Iniciando projeto
+
+	https://www.eclipse.org/downloads/
+	http://hibernate.org/
+	https://dev.mysql.com/downloads/connector/j/
+
+sudo apt install mysql-server
+sudo systemctl status mysql
+sudo mysql_secure_installation
+
+sudo mysql -u root
+create database financas;
+use financas;
+show tables;
+select * from conta...;
+desc Movimentacao;
+
+//drop banco para corrigir JoinColunm(unique=true)
+drop database financas;
+create database financas;
+//UNIQUE UNI
+desc Cliente;
+
+JPQL
+//teste query TipoMovimentacao.ENTRADA
+insert into Movimentacao(descricao, tipo, conta_id) values("outra viagem", "ENTRADA", 2);
+
+
+
+
+
+
+***resolvendo problemas de user Mysql
+
+$ sudo mysql -u root # I had to use "sudo" since is new installation
+
+mysql> USE mysql;
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+
+$ service mysql restart
+
+***
+
+
+insert into Movimentacao(data, valor, conta_id, descricao, tipo) values ('2017-01-26 18:01:07', 80.0, 2, "Restaurante", "SAIDA");
+insert into Movimentacao(data, valor, conta_id, descricao, tipo) values ('2017-01-26 19:31:12', 100.0, 2, "Cinema", "SAIDA");
+insert into Movimentacao(data, valor, conta_id, descricao, tipo) values ('2017-01-27 10:01:54', 40.0, 2, "Café da manhã", "SAIDA");
+insert into Movimentacao(data, valor, conta_id, descricao, tipo) values ('2017-01-27 15:20:13', 20.0, 2, "Lanche", "SAIDA");
+
+
+---------------------------
+
+front
+
+https://forge.jboss.org/
+
+
+forge/bin/forge
+project-new --named testejava
+
+
+http://tomcat.apache.org/download-70.cgi
+
+delete from Produto_precos;
+
+
+
